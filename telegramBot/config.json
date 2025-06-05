@@ -1,0 +1,15 @@
+{
+  "token": "YOUR_BOT_TOKEN",
+  "admin_ids": [1234567890],
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "PlanningPoker",
+    "user": "sa",
+    "password": ""
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  }
+}
