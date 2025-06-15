@@ -7,7 +7,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import TelegramObject
 from models.database import Database
 from typing import Dict, Any, Callable, Awaitable
-from handlers import start, echo
+from handlers import start, admin
 
 BASE_DIR = Path(__file__).parent
 
@@ -62,7 +62,7 @@ async def main():
         dp.update.middleware(DBModdleware(db))
         
         dp.include_router(start.router)
-        dp.include_router(echo.router)
+        dp.include_router(admin.router)
 
         logger.info("Старт бота")
         await dp.start_polling(bot)
