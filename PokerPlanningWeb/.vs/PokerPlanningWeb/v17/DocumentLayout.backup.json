@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\",
+  "WorkspaceRootPath": "C:\\repos\\poker-planning\\PokerPlanningWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\users\\kxlmtdx\\source\\repos\\pokerplanningweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\repos\\poker-planning\\pokerplanningweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\repos\\poker-planning\\pokerplanningweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\users\\kxlmtdx\\source\\repos\\pokerplanningweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\repos\\poker-planning\\pokerplanningweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\users\\kxlmtdx\\source\\repos\\pokerplanningweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\repos\\poker-planning\\pokerplanningweb\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\users\\kxlmtdx\\source\\repos\\pokerplanningweb\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|c:\\repos\\poker-planning\\pokerplanningweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93DAFB84-1D55-474F-8B48-63D020841ACD}|PokerPlanningWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,28 +30,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T14:53:52.803Z",
+              "WhenOpened": "2025-06-15T18:24:26.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:53:52.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -58,27 +74,25 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-04T14:53:36.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T14:53:36.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\repos\\poker-planning\\PokerPlanningWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T14:53:24.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T14:53:24.206Z"
             }
           ]
         }

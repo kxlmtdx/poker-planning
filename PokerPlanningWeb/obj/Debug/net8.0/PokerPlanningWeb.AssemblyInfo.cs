@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokerPlanningWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e34b26a2df41eab20c70775d13f5024d783b3eb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokerPlanningWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokerPlanningWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

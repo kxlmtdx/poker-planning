@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\PokerPlanningWeb.csproj": {}
+    "C:\\repos\\poker-planning\\PokerPlanningWeb\\PokerPlanningWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\PokerPlanningWeb.csproj": {
+    "C:\\repos\\poker-planning\\PokerPlanningWeb\\PokerPlanningWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\PokerPlanningWeb.csproj",
+        "projectUniqueName": "C:\\repos\\poker-planning\\PokerPlanningWeb\\PokerPlanningWeb.csproj",
         "projectName": "PokerPlanningWeb",
-        "projectPath": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\PokerPlanningWeb.csproj",
+        "projectPath": "C:\\repos\\poker-planning\\PokerPlanningWeb\\PokerPlanningWeb.csproj",
         "packagesPath": "C:\\Users\\kxlmtdx\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kxlmtdx\\source\\repos\\PokerPlanningWeb\\obj\\",
+        "outputPath": "C:\\repos\\poker-planning\\PokerPlanningWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
