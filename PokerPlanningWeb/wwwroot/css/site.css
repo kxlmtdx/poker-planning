@@ -1,22 +1,236 @@
-html {
-  font-size: 14px;
+﻿html {
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000;
+    --primary-light: #9e47ff;
+    --primary-dark: #0400ba;
+    --secondary-color: #03dac6;
+    --secondary-light: #66fff9;
+    --secondary-dark: #00a895;
+    --background: #f5f5f5;
+    --surface: #ffffff;
+    --error: #b00020;
+    --on-primary: #ffffff;
+    --on-secondary: #000000;
+    --on-background: #000000;
+    --on-surface: #000000;
+    --on-error: #ffffff;
+    --shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --border-radius: 8px;
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--on-background);
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 8px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1.display-4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    background: var(--surface);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-0.5px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 16px 20px;
+    font-weight: 500;
+    color: #ee0000;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Stat Cards */
+.card.text-white {
+    border: none;
+}
+
+.card.bg-primary {
+    background-color: #ee0000 !important;
+}
+
+.card.bg-success {
+    background-color: white !important;
+}
+
+.card.bg-warning {
+    background-color: white !important;
+}
+
+.card.bg-info {
+    background-color: white !important;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.card-text {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table thead th {
+        font-weight: 500;
+        text-align: left;
+        padding: 12px 16px;
+        border-bottom: 0px solid #000; /* ������� ������� */
+        color: #000000; /* ������ ����� */
+    }
+
+    .table tbody td {
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(0,0,0,0.1); /* ����� ������� ����� �������� */
+    }
+
+    .table tbody tr:last-child td {
+        border-bottom: none; /* ������� ������� � ��������� ������ */
+    }
+
+    .table tbody tr:hover {
+        background-color: #f5f5f5; /* ������-����� ��� ��� ��������� */
+    }
+
+/* ����� ��� ��������� ������� */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: rgba(0,0,0,0.02); /* ����� ������� ��� ��� ������ ����� */
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+    .badge.bg-success {
+        background-color: #46db4c;
+        color: white;
+    }
+
+    .badge.bg-warning {
+        background-color: #ff9800;
+        color: white;
+    }
+
+/* Alerts */
+.alert {
+    padding: 16px;
+    border-radius: var(--border-radius);
+}
+
+.alert-info {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+/* Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.col-md-3, .col-md-12 {
+    padding: 0 10px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.mb-4 {
+    margin-bottom: 24px !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .container-fluid {
+        padding: 10px;
+    }
 }

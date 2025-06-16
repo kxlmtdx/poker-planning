@@ -1,8 +1,208 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Task Monitoring Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h1 class="display-4">Мониторинг сессий</h1>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Всего сессий</h5>
+                    <h2 class="card-text">15</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-black bg-success">
+                <div class="card-body">
+                    <h5 class="card-title">Активные сессии</h5>
+                    <h2 class="card-text">3</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-black bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Задачи в ожидании</h5>
+                    <h2 class="card-text">7</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-black bg-info">
+                <div class="card-body">
+                    <h5 class="card-title">Завершенные задачи</h5>
+                    <h2 class="card-text">42</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Активные сессии</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width: 27%">ID сессии</th>
+                                <th>SCRUM</th>
+                                <th>Начало</th>
+                                <th>Статус</th>
+                                <th>Голоса</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SSN-001</td>
+                                <td>Иван Петров</td>
+                                <td>15.06.2023 10:30</td>
+                                <td><span class="badge bg-success">Active</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary" onclick="toggleVotes('vote1')">
+                                        Показать голоса
+                                    </button>
+                                    <div id="vote1" class="vote-details mt-2" style="display:none;">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Иван Петров</strong>
+                                            <span>5</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Мария Сидорова</strong>
+                                            <span>8</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Алексей Иванов</strong>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SSN-002</td>
+                                <td>Анна Смирнова</td>
+                                <td>15.06.2023 11:45</td>
+                                <td><span class="badge bg-success">Active</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary" onclick="toggleVotes('vote2')">
+                                        Показать голоса
+                                    </button>
+                                    <div id="vote2" class="vote-details mt-2" style="display:none;">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Анна Смирнова</strong>
+                                            <span>13</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Дмитрий Кузнецов</strong>
+                                            <span>8</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SSN-003</td>
+                                <td>Сергей Васильев</td>
+                                <td>15.06.2023 13:20</td>
+                                <td><span class="badge bg-success">Active</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary" onclick="toggleVotes('vote3')">
+                                        Показать голоса
+                                    </button>
+                                    <div id="vote3" class="vote-details mt-2" style="display:none;">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Сергей Васильев</strong>
+                                            <span>3</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Елена Попова</strong>
+                                            <span>5</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <strong class="me-2">Ольга Новикова</strong>
+                                            <span>?</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Последние задачи</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Название</th>
+                                <th>ID сессии</th>
+                                <th>ID SCRUM</th>
+                                <th>Начало</th>
+                                <th>Оценка</th>
+                                <th>Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Реализация авторизации</td>
+                                <td>SSN-001</td>
+                                <td>Иван Петров</td>
+                                <td>15.06.2023 10:30</td>
+                                <td><span class="badge bg-success">100</span></td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Фикс бага с кэшированием</td>
+                                <td>SSN-002</td>
+                                <td>Анна Смирнова</td>
+                                <td>15.06.2023 11:45</td>
+                                <td><span class="badge bg-success">80</span></td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Оптимизация запросов к БД</td>
+                                <td>SSN-003</td>
+                                <td>Сергей Васильев</td>
+                                <td>15.06.2023 13:20</td>
+                                <td><span class="badge bg-warning">Pending</span></td>
+                                <td><span class="badge bg-warning">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Доработка UI</td>
+                                <td>SSN-001</td>
+                                <td>Иван Петров</td>
+                                <td>14.06.2023 16:10</td>
+                                <td><span class="badge bg-success">13</span></td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Интеграция с платежной системой</td>
+                                <td>SSN-004</td>
+                                <td>Дмитрий Кузнецов</td>
+                                <td>14.06.2023 14:30</td>
+                                <td><span class="badge bg-success">50</span></td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
