@@ -20,8 +20,6 @@ class Database:
 
 
 
-
-
 # Session op
     def create_session(self, group_id: int, group_name: str, created_by: int) -> str:
         self.cursor.execute(
@@ -76,10 +74,32 @@ class Database:
         return self.cursor.rowcount > 0
 
 
-
-
 # Issue op
+    def create_issue(self, session_id: str, title: str, description: str, created_by: int) -> str:
+        issue_id = str(uuid.uuid4())
+        self.cursor.execute(
+            "INSERT INTO Issues (IssueId, SessionId, Title, Description, "
+            "CreatedBy, CreationDate, Status) "
+            "VALUES (?, ?, ?, ?, ?, GETDATE(), 'Voting')",
+            (issue_id, session_id, title, description, created_by)
+        )
+        self.conn.commit()
+        return issue_id
+    
+    def finalize_issue(self, issue_id: str, final_estimate: float) -> bool:
+        self.cursor.execute(
+            "UPDATE Issues SET Status = 'Completed', FinalEstimate = ?, FinalizedDate = GETDATE() "
+            "WHERE IssueId = ?",
+            (final_estimate, issue_id)
+        )
 
+        self.cursor.execute(
+            "DELETE FROM VotingMessages WHERE IssueId = ?",
+            (issue_id,)
+        )
+        
+        self.conn.commit()
+        return self.cursor.rowcount > 0
 
 
 
