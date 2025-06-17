@@ -191,3 +191,40 @@ async def confirm_issue(callback: types.CallbackQuery, state: FSMContext, db: Da
         text=f"Начато голосование за задачу: {title}\n"
              f"Участники: {len(participants)} человек"
     )
+
+@router.message(Command("finalize_issue"))
+async def cmd_finalize_issue(message: types.Message, db: Database, bot: Bot):
+    db.cursor.execute(
+        "SELECT TOP 1 i.IssueId, i.Title, dbo.CalculateMedianEstimate(i.IssueId) "
+        "FROM Issues i "
+        "JOIN Sessions s ON i.SessionId = s.SessionId "
+        "WHERE s.CreatedBy = ? AND i.Status = 'Voting' "
+        "ORDER BY i.CreationDate DESC",
+        (message.from_user.id,)
+    )
+    issue = db.cursor.fetchone()
+    
+    if not issue:
+        await message.answer("Нет активных задач для завершения.")
+        return
+    
+    issue_id, title, median = issue
+    
+    success = db.finalize_issue(issue_id, median)
+    if not success:
+        await message.answer("Ошибка при завершении задачи.")
+        return
+    
+    participants = db.get_session_participants(issue_id)
+    for participant in participants:
+        try:
+            await bot.send_message(
+                participant['UserId'],
+                f"Голосование по задаче завершено:\n\n"
+                f"Название: {title}\n"
+                f"Финальная оценка: {median}"
+            )
+        except Exception as e:
+            print(f"Не удалось отправить сообщение пользователю {participant['UserId']}: {e}")
+    
+    await message.answer(f"Задача '{title}' завершена с оценкой {median}.")
