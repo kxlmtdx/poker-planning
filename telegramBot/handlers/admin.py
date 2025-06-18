@@ -104,6 +104,75 @@ async def cmd_close_session(message: types.Message, db: Database, bot: Bot):
         "Сессия планирования завершена. Результаты отправлены Scrum-мастеру."
     )
 
+@router.message(SessionStates.waiting_for_session_name)
+async def process_session_name(message: types.Message, state: FSMContext, db: Database):
+    session_name = message.text
+    group_id = message.chat.id
+    
+    session_id = db.create_session(
+        group_id=group_id,
+        group_name=session_name,
+        created_by=message.from_user.id
+    )
+    
+    await state.update_data(session_id=session_id, group_id=group_id)
+    await message.answer(
+        f"Сессия '{session_name}' создана. Теперь добавьте участников командой /add_member @username",
+        reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="Завершить добавление", callback_data="finish_adding_members")]
+        ])
+    )
+    await state.set_state(SessionStates.waiting_for_members)
+
+@router.message(Command("add_member"))
+async def cmd_add_member(message: types.Message, state: FSMContext, db: Database, bot: Bot):
+    current_state = await state.get_state()
+    if current_state != SessionStates.waiting_for_members:
+        await message.answer("Сначала создайте сессию командой /start_session")
+        return
+    
+    if not message.reply_to_message or not message.reply_to_message.entities:
+        await message.answer("Укажите username участника в формате: /add_member @username")
+        return
+    
+    try:
+        username = message.text.split()[1].replace("@", "")
+        chat_member = await bot.get_chat_member(message.chat.id, username)
+        
+        data = await state.get_data()
+        success = db.add_group_member(
+            group_id=data['group_id'],
+            user_id=chat_member.user.id,
+            username=username,
+            first_name=chat_member.user.first_name or "",
+            last_name=chat_member.user.last_name or ""
+        )
+        
+        if success:
+            await message.answer(f"Участник @{username} добавлен в сессию")
+            try:
+                await bot.send_message(
+                    chat_member.user.id,
+                    "Вы добавлены в сессию Planning Poker. Ожидайте задач для оценки."
+                )
+            except:
+                await message.answer(f"Не удалось отправить приветствие @{username}. Убедитесь, что пользователь начал диалог с ботом.")
+        else:
+            await message.answer(f"Ошибка добавления @{username}")
+    except Exception as e:
+        await message.answer(f"Ошибка: {str(e)}")
+
+@router.callback_query(F.data == "finish_adding_members", SessionStates.waiting_for_members)
+async def finish_adding_members(callback: types.CallbackQuery, state: FSMContext, db: Database):
+    data = await state.get_data()
+    session_id = data['session_id']
+    
+    await callback.message.edit_text(
+        "Сессия планирования начата! Теперь вы можете создавать задачи командой /new_issue"
+    )
+    await state.clear()
+
+
 #issue op
 @router.message(Command("new_issue"))
 async def cmd_new_issue(message: types.Message, state: FSMContext, db: Database):
