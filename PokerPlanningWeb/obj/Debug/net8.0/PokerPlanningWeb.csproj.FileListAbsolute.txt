@@ -32,3 +32,4 @@ C:\repos\poker-planning\PokerPlanningWeb\obj\Debug\net8.0\refint\PokerPlanningWe
 C:\repos\poker-planning\PokerPlanningWeb\obj\Debug\net8.0\PokerPlanningWeb.pdb
 C:\repos\poker-planning\PokerPlanningWeb\obj\Debug\net8.0\PokerPlanningWeb.genruntimeconfig.cache
 C:\repos\poker-planning\PokerPlanningWeb\obj\Debug\net8.0\ref\PokerPlanningWeb.dll
+C:\repos\poker-planning\PokerPlanningWeb\obj\Debug\net8.0\PokerPlanningWeb.csproj.AssemblyReference.cache
